@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import './Fonts.css';
 import './App.css';
-
+import Header from './components/Header';
+import Footer from './components/Footer';
+import List from './components/List';
+import Details from './components/Details';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+/* The main App file includes header and footer elements */
+/* and The two main pages to show the elements too */
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header />
+    <Router>
+      <Routes>
+        <Route path="/" element={<List />} />
+        <Route path="/details" element={<Details />} />
+      </Routes>
+    </Router>
+    <Footer />
+    </>
   );
 }
 

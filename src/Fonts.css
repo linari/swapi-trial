@@ -1,0 +1,8 @@
+/* Custom fonts */
+/* To make sure that font will work, this way (adding font with fon your face) was chosen */
+
+@font-face {
+  font-family: 'StarJedi';
+  src: url('./fonts/StarJediV2.woff') format('woff'),
+       url('./fonts/StarJediV2.woff2') format('woff2');
+}

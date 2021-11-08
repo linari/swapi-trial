@@ -1,0 +1,137 @@
+/* CSS For Details page - description, cards */
+.main-content__details {
+  text-align: left;
+}
+
+.details__movies-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details__description {
+  list-style: none;
+  padding-left: 0;
+}
+
+.movie-card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: calc(50% - 40px);
+  height: 300px;
+  max-width: 100%;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 4px 1px #fff;
+}
+
+.movie-card__wrapper {
+  width: 100%;
+}
+
+.movie-card h3 {
+  margin-top: 0;
+}
+
+.movie-card label {
+  margin-right: 4px;
+  text-transform: uppercase;
+}
+
+.movie-card__opening--hidden {
+  display: none;
+}
+
+.movie-card__opening--visible {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: calc(100% - 0px);
+  height: calc(100% - 40px);
+  overflow: hidden;
+  background: #000;
+  padding: 0 20px;
+}
+
+.movie-card__opening-wrapper {
+  font-size: 30px;
+  height: auto;
+  letter-spacing: 6px;
+  line-height: 180%;
+  perspective: 500px;
+  text-align: justify;
+}
+
+.movie-card__opening-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: #dba90d;
+  cursor: pointer;
+  font-family: 'StarJedi';
+  line-height: 1em;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.movie-card__opening-close:hover {
+  opacity: 1;
+}
+
+.movie-card__opening-crawl {
+  position: relative;
+  top: -100px;
+  left: -15%;
+  font-size: 20px;
+  transform-origin: 50% 100%;
+  text-transform: uppercase;
+  width: 130%;
+  animation: crawl 60s infinite;
+}
+
+.movie_card__toggle {
+  background: #dba90d;
+  border: none;
+  border-radius: 4px;
+  box-shadow: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'StarJedi';
+  text-transform: lowercase;
+  font-size: 16px;
+  line-height: 1em;
+  margin-top: 20px;
+  padding: 10px;
+  width: 200px;
+}
+
+@keyframes crawl {
+  0% {
+    top: 0;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% { 
+    top: -1500px;
+    transform: rotateX(30deg) translateZ(-500px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .character-item {
+    width: 100%;
+  }
+  .movie-card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+  .movie-card__opening-wrapper {
+    line-height: 1em;
+  }
+}
